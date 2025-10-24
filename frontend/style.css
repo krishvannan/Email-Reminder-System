@@ -1,29 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f8fc;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  backdrop-filter: blur(10px);
 }
+
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-input, textarea, button {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
-  margin-top: 8px;
-  padding: 10px;
-  font-size: 16px;
+  max-width: 480px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-button {
-  background-color: #4CAF50;
-  color: white;
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #eaeaea;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   border: none;
-  cursor: pointer;
+  outline: none;
+  font-size: 0.95rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
 }
+
+input:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #00b894, #00cec9);
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
 button:hover {
-  background-color: #45a049;
+  background: linear-gradient(90deg, #00cec9, #00b894);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 206, 201, 0.5);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
 }
