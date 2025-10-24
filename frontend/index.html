@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Reminder System</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Email Reminder System</h1>
-    <form id="reminderForm">
-      <label>Email:</label>
-      <input type="email" id="email" required>
 
-      <label>Subject:</label>
-      <input type="text" id="subject" required>
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter recipient email" required>
 
-      <label>Message:</label>
-      <textarea id="message" required></textarea>
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="Enter reminder subject" required>
 
-      <label>Reminder Time (24hr format):</label>
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Type your reminder message" rows="4" required></textarea>
+
+      <label for="time">Reminder Time (24hr format)</label>
       <input type="time" id="time" required>
 
       <button type="submit">Set Reminder</button>
     </form>
-    <p id="status"></p>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
