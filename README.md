@@ -13,12 +13,10 @@ email-reminder/
 │   ├── server.js          
 │   ├── package.json       
 │   └── .env 
-│
 ├── frontend/              
 │   ├── index.html         
 │   ├── style.css          
 │   └── script.js          
-│
 └── .gitignore             
 
 ---
