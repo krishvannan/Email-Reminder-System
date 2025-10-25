@@ -10,7 +10,7 @@
   <div class="container">
     <h1>Email Reminder System</h1>
 
-    <form>
+    <form id="reminderForm">
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Enter recipient email" required>
 
@@ -20,11 +20,15 @@
       <label for="message">Message</label>
       <textarea id="message" placeholder="Type your reminder message" rows="4" required></textarea>
 
-      <label for="time">Reminder Time (24hr format)</label>
-      <input type="time" id="time" required>
+      <label for="date">Reminder Date & Time</label>
+      <input type="datetime-local" id="date" required>
 
       <button type="submit">Set Reminder</button>
     </form>
+
+    <p id="status"></p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
