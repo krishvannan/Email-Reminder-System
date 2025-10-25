@@ -6,6 +6,7 @@ Users can enter an email address, subject, message, and time — and the system 
 
 ---
 ## Folder structure
+
 email-reminder/
 │
 ├── backend/           # Node.js backend
