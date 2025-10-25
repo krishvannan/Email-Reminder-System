@@ -5,22 +5,20 @@ The **Email Reminder System** is a web-based application that allows users to sc
 Users can enter an email address, subject, message, and time — and the system will automatically send an email at the specified time.
 
 ---
-
-## Project Structure
-```
-email-reminder-system/
+## Folder structure
+email-reminder/
 │
-├── frontend/
+├── backend/           # Node.js backend
+│   ├── server.js
+│   ├── package.json
+│   └── .env (not included)
+│
+├── frontend/          # Frontend files
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
-├── backend/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
-```
+└── .gitignore
 
 ---
 
@@ -41,73 +39,49 @@ email-reminder-system/
 ---
 
 ## Setup Instructions
+Setup Instructions
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/<your-username>/email-reminder-system.git
-cd email-reminder-system
-```
+## Clone the repository
 
-### 2. Backend Setup
-- Navigate to the backend folder:
-```bash
+git clone <your-repo-URL>
+cd email-reminder
+
+
+## Install backend dependencies
+
 cd backend
 npm install
-```
-- Open **server.js**  
-- Replace:
-```js
-user: 'youremail@gmail.com',
-pass: 'yourapppassword'
-```
-with your **Gmail** and **App Password** (use an app password, not your Gmail password)  
 
-### 3. Run the Backend
-```bash
-npm start
-```
-- The server will start on **http://localhost:5000**  
-- Keep this terminal open while using the frontend
 
-### 4. Frontend Setup
-- Open `frontend/index.html` in your browser  
-- Fill in the following fields in the form:
-  - **Email** – recipient email address  
-  - **Subject** – email subject  
-  - **Message** – email content  
-  - **Reminder Time** – time to send the email (24-hour format)  
-- Click **Set Reminder** to schedule the email
+## Create a .env file in the backend folder
 
----
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
 
-## How It Works
-1. User enters email details in the form.  
-2. Frontend sends data to backend endpoint `/set-reminder`.  
-3. Backend schedules the email using **node-schedule**.  
-4. At the scheduled time, **Nodemailer** automatically sends the email.
+Note: Use a Gmail App Password not Gmail password. Do not share your .env publicly.
 
----
+Start the backend server
+node server.js
 
-## Example
-| Field   | Example                                   |
-|---------|-------------------------------------------|
-| Email   | test@gmail.com                            |
-| Subject | Meeting Reminder                          |
-| Message | Don’t forget the 5 PM team meeting.       |
-| Time    | 17:00                                     |
 
----
+By default, it runs on http://localhost:5000.
+Open the frontend
 
-## Future Enhancements
-- Add date picker for scheduling on specific days  
-- Store reminders in a database (e.g., MongoDB)  
-- Add login system for users  
-- Deploy online using Render, Vercel, or other hosting services
+Open frontend/index.html in a browser.
 
----
+Fill in the form and schedule a reminder.
 
-## Author
-**Krish Vannan**  
-💌 krishvannan7@gmail.com  
-📂 GitHub: [https://github.com/<your-username>](https://github.com/<krishvannan>)  
-📅 Project created in 2025
+## Scheduling Email
+
+Enter valid email, subject, message, and future date/time.
+
+You should see a success message if the email is scheduled correctly.
+
+Email will be sent automatically at the scheduled time.
+
+## Important Notes
+
+.env and node_modules/ are excluded from the repo for security and size reasons.
+You must create your own .env to run the project.
+Ensure your system time is correct for scheduling emails.
+
