@@ -7,19 +7,19 @@ Users can enter an email address, subject, message, and time — and the system 
 ---
 ## Folder structure
 
-email-reminder/
+email-reminder/            ← Root folder of your project
 │
-├── backend/           # Node.js backend
-│   ├── server.js
-│   ├── package.json
-│   └── .env (not included)
+├── backend/               ← Folder containing all backend files (Node.js)
+│   ├── server.js          ← Your main server code
+│   ├── package.json       ← Node.js dependencies & scripts
+│   └── .env (not included)← Environment file (kept secret)
 │
-├── frontend/          # Frontend files
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+├── frontend/              ← Folder containing frontend files
+│   ├── index.html         ← HTML file
+│   ├── style.css          ← CSS file
+│   └── script.js          ← JS file for form handling
 │
-└── .gitignore
+└── .gitignore             ← Git ignore file for node_modules, .env, etc.
 
 ---
 
